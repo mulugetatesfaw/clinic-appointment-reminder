@@ -33,6 +33,31 @@
      Open your browser and go to
    👉 http://127.0.0.1:8000/
 
+12. Create a superuser (for Django Admin access)
+
+      python manage.py createsuperuser
+
+    Open the Django admin panel 👉 http://127.0.0.1:8000/admin
+
+    Log in with the superuser credentials you created.
+    
+🗓 Scheduling an Appointment & Receiving Reminder
+
+    Log in to the Django Admin Panel.
+
+    Go to Appointments and create a new appointment with 3 minutes above from the time now and expect email before 3 minutes from your appointment time: for test purpose i set it 3 minute
+
+    Patient details
+
+    Date & time of appointment
+
+    Any other required fields
+
+    The system will send a reminder email to your email account configured in .env (EMAIL_HOST_USER).
+
+   Check your inbox to confirm you received the reminder email.
+
+
 
 
 
