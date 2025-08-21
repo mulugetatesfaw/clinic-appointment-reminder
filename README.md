@@ -21,13 +21,15 @@
 
    
    GEMINI_API_KEY=your_api_key_here
+   
    EMAIL_HOST_USER=your_email@example.com
+   
    EMAIL_HOST_PASSWORD=your_app_password_here
    
-8. Run the Django server
+9. Run the Django server
     python manage.py runserver
     
-9. Access the project
+10. Access the project
      Open your browser and go to
    👉 http://127.0.0.1:8000/
 
