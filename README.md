@@ -1,9 +1,10 @@
 1. Installation & Setup
- .Clone the repository
 
- .git clone https://github.com/mulugetatesfaw/clinic-appointment-reminder.git
+ Clone the repository
 
- .cd clinic-appointment-reminder
+ git clone https://github.com/mulugetatesfaw/clinic-appointment-reminder.git
+
+ cd clinic-appointment-reminder
 
 3. Create a virtual environment
    python3 -m venv venv
