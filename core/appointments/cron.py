@@ -7,10 +7,10 @@ from core.gemini_client import generate_email_reminder
 
 def send_appointment_reminders():
     now = timezone.now()
-    reminder_time = now + timezone.timedelta(hours=3)
+    reminder_time = now + timezone.timedelta(minutes=3)
 
     upcoming_appointments = Appointment.objects.filter(
-        date__range=(reminder_time, reminder_time + timezone.timedelta(hours=1))
+        date__range=(reminder_time, reminder_time + timezone.timedelta(minutes=1))
     )
 
     for appt in upcoming_appointments:
@@ -21,7 +21,7 @@ def send_appointment_reminders():
             appointment_time=appt.date.strftime("%Y-%m-%d %H:%M")
         )
         send_mail(
-            subject="Appointment Reminder",
+            subject="Ethio-Care Clinic Appointment Reminder",
             message=email_body,
             from_email=os.getenv("EMAIL_HOST_USER"),
             recipient_list=[appt.patient.email],
